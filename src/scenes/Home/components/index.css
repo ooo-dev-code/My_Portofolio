@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Oi&family=Rye&display=swap');
+
+:root {
+  --black1: #171717;
+  --black: #08306c;
+}
+
+body {
+    margin: 0;
+    background-image: url("./assets/heather-green-FWCUQT7QlyI-unsplash.jpg");
+}
+
+.UpBar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    border:0;
+    border-bottom:1px solid blue;
+    animation: 1.5s ease-out 0s 1 slideInLeft;
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.TextUpBar {
+    text-shadow: white 5px 4px 10px;
+    color: aliceblue;
+    padding: 10px;
+    font-family: "Oi", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.End {
+    display: flex;
+}
+.LightDark {
+    width: 70px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 11px 0px black;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.LightDarkClick {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: linear-gradient(90deg, rgba(10,3,131,1) 0%, rgba(3,3,96,1) 36%, rgba(4,21,56,1) 100%);
+    box-shadow: 1px 2px 5px 0px rgb(79 79 79);
+    position: relative;
+    left: 0px;
+}
+.ListOptions {
+    color: aliceblue;
+    margin-right: 25px;
+    display: flex;
+}
+.Options {
+    min-width: 100px;
+    box-shadow: inset rgb(194 187 243) 2px 2px 10px 0px;
+    height: 25px;
+    margin-right: 26px;
+    border-radius: 15px 5px 5px 15px;
+    font-size: 15px;
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0.1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+/* """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" */
+
+.Box {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0.1;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.Title {
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    text-shadow: 3px 1px 0px #969494;
+    animation: 1.5s ease-out 0s 1 apparition;
+}
+.SubTitle {
+    font-size: 2.5rem;
+    opacity: 0.9;
+    text-shadow: 3px 1px 0px #585454;
+    margin-top: 10px;
+    font-family: "Borel", serif;
+    animation: 2s ease-out 0s 1 apparition;
+  font-weight: 400;
+  font-style: normal;
+}
+.Description {
+    
+    font-size: 1rem;
+    opacity: 0.7;
+    text-shadow: 3px 1px 0px #585454;
+    animation: 2.5s ease-out 0s 1 apparition;
+    margin-top: 10px;
+    width: 500px;
+    text-align: center;
+
+}
+
+/* ------------------------------------------- */
+
+.DownBar {
+    color: aliceblue;
+    width: 100%;
+    height: 70px;
+    border-top: 2px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px 40px var(--black);
+    background-color: var(--black);
+    position: fixed;
+    bottom: 0;
+    animation: 1.5s ease-out 0s 1 apparition;
+
+    &::after {
+        content: "";
+        width: 250px;
+        height: 200px;
+        background-color: var(--black);
+        box-shadow: 0px 0px 40px 40px var(--black);
+        border-radius: 50px;
+        position: fixed;
+        left: -100px;
+        top: 450px;
+        z-index: -1;
+        animation: 1.5s ease-out 0s 1 apparition;
+    }
+    &::before {
+        content: "";
+        width: 250px;
+        height: 200px;
+        background-color: var(--black);
+        box-shadow: 0px 0px 40px 40px var(--black);
+        border-radius: 50px;
+        position: fixed;
+        right: -100px;
+        top: 450px;
+        z-index: -1;
+        animation: 1.5s ease-out 0s 1 apparition;
+    }
+}
